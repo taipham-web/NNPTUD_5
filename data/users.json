@@ -2,7 +2,7 @@
   {
     "id": 1,
     "username": "admin",
-    "password": "admin123",
+    "password": "$2b$10$eZ48U7D63hf9RX2eXGaXY.esQkuGLd9N2EoEuIpGCbQJr.L3ZGIlq",
     "email": "admin@example.com",
     "fullName": "Administrator",
     "avatarUrl": "https://i.sstatic.net/l60Hf.png",
@@ -16,7 +16,7 @@
   {
     "id": 2,
     "username": "john_doe",
-    "password": "password123",
+    "password": "$2b$10$HSPjhbZOtPXMuz9hPs/JdOrZD1Ba87IlN9uDpDq8gosoOnc5uUZTK",
     "email": "john@example.com",
     "fullName": "John Doe",
     "avatarUrl": "https://i.sstatic.net/l60Hf.png",
@@ -30,7 +30,7 @@
   {
     "id": 3,
     "username": "jane_smith",
-    "password": "password456",
+    "password": "$2b$10$Zv4x6wAR34S8Q2NyOC17ZODxRCKzHt0hwS29VWQBwOp1950y0KBX6",
     "email": "jane@example.com",
     "fullName": "Jane Smith",
     "avatarUrl": "https://i.sstatic.net/l60Hf.png",
@@ -39,6 +39,20 @@
     "loginCount": 12,
     "createdAt": "2024-02-01T00:00:00.000Z",
     "updatedAt": "2024-02-01T00:00:00.000Z",
+    "deleted": false
+  },
+  {
+    "id": 4,
+    "username": "Tai Pham",
+    "password": "$2b$10$cn9KksIL0AWyxcFMuhZ6j.sFjb34ytPVJA/NCGkIqDOSmAJzWzbQq",
+    "email": "phamhuynhtai2004@gmail.com",
+    "fullName": "",
+    "avatarUrl": "https://i.sstatic.net/l60Hf.png",
+    "status": false,
+    "roleId": null,
+    "loginCount": 0,
+    "createdAt": "2026-03-06T09:30:05.627Z",
+    "updatedAt": "2026-03-06T09:30:05.627Z",
     "deleted": false
   }
 ]

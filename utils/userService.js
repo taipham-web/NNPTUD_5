@@ -1,5 +1,8 @@
 var fs = require('fs');
 var path = require('path');
+var bcrypt = require('bcrypt');
+
+const SALT_ROUNDS = 10;
 
 const DATA_PATH = path.join(__dirname, '../data/users.json');
 const ROLES_PATH = path.join(__dirname, '../data/roles.json');
@@ -86,7 +89,7 @@ function getUserById(id) {
  * @param {Object} userData - User data { username, password, email, fullName, avatarUrl, roleId }
  * @returns {Object} Result object { success, data, error }
  */
-function createUser(userData) {
+async function createUser(userData) {
   try {
     const users = readUsers();
     const roles = readRoles();
@@ -128,11 +131,14 @@ function createUser(userData) {
     const maxId = users.reduce((max, user) => Math.max(max, user.id), 0);
     const newId = maxId + 1;
     
+    // Hash password with bcrypt
+    const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
+    
     // Create new user
     const newUser = {
       id: newId,
       username: username,
-      password: password,
+      password: hashedPassword,
       email: email,
       fullName: fullName,
       avatarUrl: avatarUrl,
@@ -159,7 +165,7 @@ function createUser(userData) {
  * @param {Object} updateData - Update data { username, password, email, fullName, avatarUrl, roleId, loginCount }
  * @returns {Object} Result object { success, data, error }
  */
-function updateUser(id, updateData) {
+async function updateUser(id, updateData) {
   try {
     const users = readUsers();
     const roles = readRoles();
@@ -198,7 +204,11 @@ function updateUser(id, updateData) {
       users[userIndex].roleId = roleId;
     }
     
-    if (password) users[userIndex].password = password;
+    // Hash password with bcrypt if provided
+    if (password) {
+      const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
+      users[userIndex].password = hashedPassword;
+    }
     if (fullName !== undefined) users[userIndex].fullName = fullName;
     if (avatarUrl) users[userIndex].avatarUrl = avatarUrl;
     if (loginCount !== undefined && loginCount >= 0) users[userIndex].loginCount = loginCount;
@@ -316,6 +326,16 @@ function disableUser(email, username) {
   }
 }
 
+/**
+ * Compare a plain text password with a hashed password
+ * @param {String} plainPassword - Plain text password
+ * @param {String} hashedPassword - Hashed password from database
+ * @returns {Promise<Boolean>} True if passwords match
+ */
+async function comparePassword(plainPassword, hashedPassword) {
+  return bcrypt.compare(plainPassword, hashedPassword);
+}
+
 module.exports = {
   getAllUsers,
   getUserById,
@@ -323,5 +343,6 @@ module.exports = {
   updateUser,
   deleteUser,
   enableUser,
-  disableUser
+  disableUser,
+  comparePassword
 };

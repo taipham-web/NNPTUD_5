@@ -53,8 +53,8 @@ router.get("/:id", function (req, res, next) {
  * Create a new user
  * Body: { username, password, email, fullName, avatarUrl, roleId }
  */
-router.post("/", function (req, res, next) {
-  const result = userService.createUser(req.body);
+router.post("/", async function (req, res, next) {
+  const result = await userService.createUser(req.body);
   
   if (!result.success) {
     return res.status(400).json({
@@ -70,9 +70,9 @@ router.post("/", function (req, res, next) {
  * Update an existing user
  * Body: { username, password, email, fullName, avatarUrl, roleId, loginCount } (all optional)
  */
-router.put("/:id", function (req, res, next) {
+router.put("/:id", async function (req, res, next) {
   const userId = parseInt(req.params.id);
-  const result = userService.updateUser(userId, req.body);
+  const result = await userService.updateUser(userId, req.body);
   
   if (!result.success) {
     const statusCode = result.error === 'User not found' ? 404 : 400;

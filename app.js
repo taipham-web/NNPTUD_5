@@ -24,6 +24,7 @@ app.use("/api/v1/users", require("./routes/users"));
 app.use("/products", require("./routes/products"));
 app.use("/api/v1/categories", require("./routes/categories"));
 app.use("/api/v1/roles", require("./routes/roles"));
+app.use("/api/v1/auth", require("./routes/auth"));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
