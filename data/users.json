@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "admin123",
+    "email": "admin@example.com",
+    "fullName": "Administrator",
+    "avatarUrl": "https://i.sstatic.net/l60Hf.png",
+    "status": true,
+    "roleId": 1,
+    "loginCount": 5,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z",
+    "deleted": false
+  },
+  {
+    "id": 2,
+    "username": "john_doe",
+    "password": "password123",
+    "email": "john@example.com",
+    "fullName": "John Doe",
+    "avatarUrl": "https://i.sstatic.net/l60Hf.png",
+    "status": false,
+    "roleId": 2,
+    "loginCount": 0,
+    "createdAt": "2024-01-15T00:00:00.000Z",
+    "updatedAt": "2026-03-06T06:16:21.709Z",
+    "deleted": false
+  },
+  {
+    "id": 3,
+    "username": "jane_smith",
+    "password": "password456",
+    "email": "jane@example.com",
+    "fullName": "Jane Smith",
+    "avatarUrl": "https://i.sstatic.net/l60Hf.png",
+    "status": true,
+    "roleId": 3,
+    "loginCount": 12,
+    "createdAt": "2024-02-01T00:00:00.000Z",
+    "updatedAt": "2024-02-01T00:00:00.000Z",
+    "deleted": false
+  }
+]

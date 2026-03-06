@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "admin",
+    "description": "Administrator with full access",
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z",
+    "deleted": false
+  },
+  {
+    "id": 2,
+    "name": "user",
+    "description": "Regular user with basic access",
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z",
+    "deleted": false
+  },
+  {
+    "id": 3,
+    "name": "moderator",
+    "description": "Moderator with content management access",
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z",
+    "deleted": false
+  },
+  {
+    "id": 4,
+    "name": "guest",
+    "description": "Guest user role",
+    "createdAt": "2026-03-06T06:13:35.642Z",
+    "updatedAt": "2026-03-06T06:13:35.642Z",
+    "deleted": false
+  }
+]

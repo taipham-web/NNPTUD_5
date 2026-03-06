@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Classic T-Shirt",
+    "price": 29.99,
+    "description": "A comfortable cotton t-shirt",
+    "images": ["https://i.imgur.com/1twoaDy.jpeg"],
+    "categoryId": 7
+  },
+  {
+    "id": 2,
+    "title": "Denim Jeans",
+    "price": 59.99,
+    "description": "Stylish blue denim jeans",
+    "images": ["https://i.imgur.com/QkIa5tT.jpeg"],
+    "categoryId": 7
+  },
+  {
+    "id": 3,
+    "title": "Laptop Pro",
+    "price": 1299.99,
+    "description": "High-performance laptop for professionals",
+    "images": ["https://i.imgur.com/ZANVnHE.jpeg"],
+    "categoryId": 8
+  },
+  {
+    "id": 4,
+    "title": "Wireless Headphones",
+    "price": 149.99,
+    "description": "Noise-cancelling wireless headphones",
+    "images": ["https://i.imgur.com/ZANVnHE.jpeg"],
+    "categoryId": 8
+  },
+  {
+    "id": 5,
+    "title": "Modern Sofa",
+    "price": 799.99,
+    "description": "Comfortable 3-seater sofa",
+    "images": ["https://i.imgur.com/Qphac99.jpeg"],
+    "categoryId": 9
+  },
+  {
+    "id": 6,
+    "title": "Dining Table",
+    "price": 499.99,
+    "description": "Wooden dining table for 6 people",
+    "images": ["https://i.imgur.com/Qphac99.jpeg"],
+    "categoryId": 9
+  },
+  {
+    "id": 7,
+    "title": "Running Shoes",
+    "price": 89.99,
+    "description": "Lightweight running shoes",
+    "images": ["https://i.imgur.com/qNOjJje.jpeg"],
+    "categoryId": 10
+  },
+  {
+    "id": 8,
+    "title": "Leather Boots",
+    "price": 129.99,
+    "description": "Premium leather boots",
+    "images": ["https://i.imgur.com/qNOjJje.jpeg"],
+    "categoryId": 10
+  },
+  {
+    "id": 9,
+    "title": "Coffee Mug",
+    "price": 12.99,
+    "description": "Ceramic coffee mug",
+    "images": ["https://i.imgur.com/BG8J0Fj.jpg"],
+    "categoryId": 11
+  },
+  {
+    "id": 10,
+    "title": "Notebook Set",
+    "price": 19.99,
+    "description": "Set of 3 notebooks",
+    "images": ["https://i.imgur.com/BG8J0Fj.jpg"],
+    "categoryId": 11
+  }
+]
